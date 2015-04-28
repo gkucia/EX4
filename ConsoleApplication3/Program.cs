@@ -13,14 +13,6 @@ namespace ConsoleApplication3
         private string _books;
         private int _pages;
         
-        //Print ფუნქცია
-        public void Print (string a, string b, int c) {
-            a = _author;
-            b = _books;
-            c = _pages;
-            Console.WriteLine(_author, _books, _pages);
-        }
-
         //_author property
         public string Author {
             get {
@@ -50,12 +42,19 @@ namespace ConsoleApplication3
             set { //ვამოწმებთ გვერდების რაოდენობას
                 if (10 < value && value < 100)
                 {
-                    Console.WriteLine("Number of pages must be from 10 to 100");
-                }
-                else {
                     this._pages = value;
                 }
+                else {
+                    Console.WriteLine("Number of pages must be from 10 to 100");
+                }
             }   
+        }
+
+
+        //Print ფუნქცია
+        public void Print()
+        {
+            Console.WriteLine(_author, _books, _pages);
         }
 
 
@@ -66,6 +65,16 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         {
+
+            Book b1 = new Book();
+            b1.Author = Console.ReadLine();
+            b1.Books = Console.ReadLine();
+            b1.Pages = Convert.ToInt32(Console.ReadLine());
+
+            
+
+
+
             
 
         }
