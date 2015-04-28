@@ -54,7 +54,8 @@ namespace ConsoleApplication3
         //Print ფუნქცია
         public void Print()
         {
-            Console.WriteLine(_author, _books, _pages);
+            
+            Console.WriteLine("Avtori aris " + Author + ", wigni:  " + Books + ", gverdebis raodenoba: " + Pages);
         }
 
 
@@ -65,13 +66,24 @@ namespace ConsoleApplication3
     {
         static void Main(string[] args)
         {
+            //first class
+            //Book b1 = new Book();
+            //b1.Author = Console.ReadLine();
+            //b1.Books = Console.ReadLine();
+            //b1.Pages = Convert.ToInt32(Console.ReadLine());
+            //b1.Print();
 
-            Book b1 = new Book();
-            b1.Author = Console.ReadLine();
-            b1.Books = Console.ReadLine();
-            b1.Pages = Convert.ToInt32(Console.ReadLine());
+            Book b2 = new Book();
+            b2.Author = Console.ReadLine();
+            b2.Books = Console.ReadLine();
+            b2.Pages = Convert.ToInt32(Console.ReadLine());
 
-            
+            //სოფო, აქ ამ output-ს გამოაქვს მარტო b2.Author და ვერ გავიგე რატომ
+            //ასე თუ დავწერ
+            //Console.WriteLine("Avtori aris " + Author + ", wigni:  " + Books + ", gverdebis raodenoba: " + Pages);
+            //მაშინ გამოაქვს ჩვეულებრივად და ვერ ვხვდები რატომ
+            Console.WriteLine(b2.Author, b2.Books, b2.Pages);
+
 
 
 
