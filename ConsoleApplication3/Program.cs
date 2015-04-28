@@ -47,7 +47,8 @@ namespace ConsoleApplication3
         {
             Book b1 = new Book();
             int inp1 = Convert.ToInt32(Console.ReadLine());
-
+            //comment
+            b1.Pages = inp1;
             b1.Print();
 
         }
