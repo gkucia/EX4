@@ -77,7 +77,15 @@ namespace ConsoleApplication3
             Book b2 = new Book();
             b2.Author = Console.ReadLine();
             b2.Books = Console.ReadLine();
-            b2.Pages = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                b2.Pages = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Input numbers only");
+                System.Environment.Exit(0);
+            }
 
             //სოფო, აქ ამ output-ს გამოაქვს მარტო b2.Author და ვერ გავიგე რატომ
             //ასე თუ დავწერ
