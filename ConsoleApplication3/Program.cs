@@ -46,6 +46,7 @@ namespace ConsoleApplication3
                 }
                 else {
                     Console.WriteLine("Number of pages must be from 10 to 100");
+                    System.Environment.Exit(0);
                 }
             }   
         }
