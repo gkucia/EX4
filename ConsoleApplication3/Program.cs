@@ -40,12 +40,12 @@ namespace ConsoleApplication3
                 return this._pages;
             }
             set { //ვამოწმებთ გვერდების რაოდენობას
-                if (10 < value && value < 100)
+                if (10 < value && value < 1000)
                 {
                     this._pages = value;
                 }
                 else {
-                    Console.WriteLine("Number of pages must be from 10 to 100");
+                    Console.WriteLine("Number of pages must be from 10 to 1000");
                     System.Environment.Exit(0);
                 }
             }   
@@ -68,15 +68,32 @@ namespace ConsoleApplication3
         static void Main(string[] args)
         {
             //first class
-            //Book b1 = new Book();
-            //b1.Author = Console.ReadLine();
-            //b1.Books = Console.ReadLine();
-            //b1.Pages = Convert.ToInt32(Console.ReadLine());
-            //b1.Print();
+            Book b1 = new Book();
+            Console.WriteLine("Shemoitanet avtori: ");
+            b1.Author = Console.ReadLine();
+            Console.WriteLine("Shemoitanet wigni: ");
+            b1.Books = Console.ReadLine();
+            Console.WriteLine("Shemoitanet gverdebis raodenoba: ");
+            try
+            {
+                b1.Pages = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Input numbers only");
+                System.Environment.Exit(0);
+            }
+            b1.Print();
 
+
+
+            //second class
             Book b2 = new Book();
+            Console.WriteLine("Shemoitanet avtori: ");
             b2.Author = Console.ReadLine();
+            Console.WriteLine("Shemoitanet wigni: ");
             b2.Books = Console.ReadLine();
+            Console.WriteLine("Shemoitanet gverdebis raodenoba: ");
             try
             {
                 b2.Pages = Convert.ToInt32(Console.ReadLine());
@@ -87,16 +104,9 @@ namespace ConsoleApplication3
                 System.Environment.Exit(0);
             }
 
-            //სოფო, აქ ამ output-ს გამოაქვს მარტო b2.Author და ვერ გავიგე რატომ
-            //ასე თუ დავწერ
-            //Console.WriteLine("Avtori aris " + Author + ", wigni:  " + Books + ", gverdebis raodenoba: " + Pages);
-            //მაშინ გამოაქვს ჩვეულებრივად და ვერ ვხვდები რატომ
-            Console.WriteLine(b2.Author, b2.Books, b2.Pages);
+            Console.WriteLine("Avtori aris " + b2.Author + ", wigni:  " + b2.Books + ", gverdebis raodenoba: " + b2.Pages);
 
-
-
-
-            
+                       
 
         }
     }
